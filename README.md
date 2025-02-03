@@ -1,4 +1,4 @@
-# Book Note Project
+# Book Note
 
 This project allows users to search for books using the Google Books API, save them with personal ratings, and add notes for future reference. The goal of this project was to practice working with APIs, databases, and server-side rendering.
 
