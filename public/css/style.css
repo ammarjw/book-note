@@ -1,0 +1,13 @@
+.hover:hover{
+    background-color: saddlebrown !important;
+}
+
+span, strong{
+    color: #eee !important;
+}
+
+span{
+    color: #eee !important;
+    margin-left: 12px;
+    line-height: 1.8;
+}

@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+    <main class="py-5">
+        <div class="bg-dark text-light">
+            <div class="container">
+                <h2 class="text-3xl mb-4">All books in library:</h2>
+                <div class="row g-4">
+                    <!-- Duplicate the column for more books -->
+                    <% books.forEach(book => { %>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="position-relative d-flex flex-column" style="max-height: 400px;">
+                                <!-- Rating Badge -->
+                                <span class="position-absolute top-0 end-0 badge bg-danger mt-2 me-2" style="font-size: 0.8rem;"><%= book.rating %>/10</span>
+                                <!-- Book Image with Link -->
+                                <a href="/add/<%= book.book_id %>" class="d-block rounded overflow-hidden flex-grow-1 link-underline link-underline-opacity-0">
+                                    <img src="<%= book.image %>" alt="Front cover of Book Title" class="img-fluid w-100 h-100" style="max-height: 400px;">
+                                    <h3 class="h5 hover mb-0 bg-secondary text-truncate hover-bg-dark text-light p-2"><%= book.title %></h3>
+                                </a>
+                            </div>
+                        </div>
+                    <% }) %>
+                    <!-- More book cards can be added here... -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+<%- include("partials/footer") %>
